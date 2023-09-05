@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootDynamoDBApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootDynamodbAppApplication.class, args);
+		SpringApplication.run(SpringBootDynamoDBApplication.class, args);
 	}
 
 }
