@@ -11,7 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
-@RestController("/v1")
+@RestController
+@RequestMapping("/v1")
 public class EmployeeController {
 
     @Autowired

@@ -3,6 +3,8 @@ package com.slns.config;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.regions.Region;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -23,7 +25,7 @@ public class DynamoDBConfiguration {
                 .withEndpointConfiguration(
                         new AwsClientBuilder.EndpointConfiguration(
                                 "dynamodb.us-east-1.amazonaws.com",
-                                "us-east-1"
+                                Region.getRegion(Regions.US_EAST_1).getName()
                         )
                 ).withCredentials(
                         new AWSStaticCredentialsProvider(
